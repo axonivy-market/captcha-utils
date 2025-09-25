@@ -9,10 +9,14 @@
       "type" : "RequestStart",
       "name" : "CaptchaDemo",
       "config" : {
-        "signature" : "CaptchaDemo"
+        "signature" : "CaptchaDemo",
+        "request" : {
+          "name" : "1. Captcha Demo"
+        }
       },
       "visual" : {
-        "at" : { "x" : 96, "y" : 64 }
+        "at" : { "x" : 128, "y" : 64 },
+        "icon" : "res:/webContent/icons/captcha-utils-logo.png?small"
       },
       "connect" : [
         { "id" : "f2", "to" : "f3" }
@@ -21,8 +25,9 @@
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 600, "y" : 64 },
-        "labelOffset" : { "x" : 13, "y" : 33 }
+        "at" : { "x" : 424, "y" : 64 },
+        "labelOffset" : { "x" : 13, "y" : 33 },
+        "icon" : "res:/webContent/icons/captcha-utils-logo.png?small"
       }
     }, {
       "id" : "f3",
@@ -32,7 +37,8 @@
         "dialog" : "com.axonivy.utils.captcha.demo.CaptchaDemo:start()"
       },
       "visual" : {
-        "at" : { "x" : 336, "y" : 64 }
+        "at" : { "x" : 272, "y" : 64 },
+        "icon" : "res:/webContent/icons/captcha-utils-logo.png"
       },
       "connect" : [
         { "id" : "f4", "to" : "f1", "color" : "default" }
