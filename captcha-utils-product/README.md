@@ -30,4 +30,3 @@ You can collect all requirements and parse it to the function generateImageCaptc
 - Verify captcha if is valid and match - this function provides a straightforward method to check if a user's input matches the correct CAPTCHA value.
   - How it Works: The function compares the user-submitted string with the actual CAPTCHA value stored on the server.
   - Verification: It returns a boolean result (true if the values match, false otherwise), allowing you to proceed with the user's action or prompt them to try again.
-
