@@ -5,7 +5,7 @@
   <version>12.0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <build>
+   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -23,6 +23,29 @@
                 <descriptor>zip.xml</descriptor>
               </descriptors>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+              <skip>${skip-readme}</skip>
+              <target>
+                <copy todir="${project.build.directory}">
+                  <fileset dir="../../" includes="doc/**" />
+                </copy>
+                <copy todir="${project.build.directory}">
+                  <fileset dir="." includes="README*.md" />
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
