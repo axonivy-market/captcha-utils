@@ -8,9 +8,7 @@ This tool ensures that user interactions are authentic, providing a robust layer
 * **Generate Audio CAPTCHA:** Provide accessible audio challenges for visually impaired users.
 * **Verify CAPTCHA:** A simple and reliable way to validate user input against the generated CAPTCHA value.
 
-### Function Details:
-
-
+### Function Details:<br><br>
 Generate Image CAPTCHA - this function creates a unique image-based CAPTCHA with several customizable options:
 * **Dimensions:** Specify the exact width and height of the CAPTCHA image to fit your UI.
 * **Content Type:** Define the characters to be used in the CAPTCHA. You can choose from numbers, Latin characters, etc...
@@ -41,4 +39,3 @@ Information for developers: The `generateImageCaptcha` function is used in the b
 ### Audio verification
 
 ![audio-captcha](images/audio-captcha.png)
-
