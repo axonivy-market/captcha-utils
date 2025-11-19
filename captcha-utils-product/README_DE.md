@@ -1,61 +1,61 @@
-# CAPTCHA UTILS
+# CAPTCHA-UTILS
 
-Ein umfassender Nutzen für generieren und überprüfend Image und Audio CAPTCHAs
-zu fest euren Antrag von bot und automatisierte Krämpfe. Dieses Tool sichert
-jene Nutzer Interaktionen sind glaubwürdig, versehend eine stabile Auflage von
-#Trutz für Formen, Anmeldungen, und #andere kritischen Gegenden von eurem
-Antrag.
+Ein umfassendes Dienstprogramm zum Generieren und Überprüfen von Bild- und
+Audio-CAPTCHAs, um Ihre Anwendung vor Bot- und automatisierten Angriffen zu
+schützen. Dieses Tool stellt sicher, dass Benutzerinteraktionen authentisch
+sind, und bietet einen robusten Schutz für Formulare, Anmeldungen und andere
+kritische Bereiche Ihrer Anwendung.
 
-### Wesentliche Charakterzüge:
-* **Generiert Image CAPTCHA:** Schaffen customizable Image-basisbezogene
+### Wichtigste Funktionen:
+* **Bild-CAPTCHA generieren:** Erstellen Sie anpassbare bildbasierte
   Herausforderungen.
-* **Generiert Audio CAPTCHA:** Versehen erreichbare Audio Herausforderungen für
-  sichtbar #getrübt Nutzer.
-* **Überprüfen CAPTCHA:** Ein simples und zuverlässiger Weg zu validieren Nutzer
-  #einlesen #wider den generiert CAPTCHA Wert.
+* **Audio-CAPTCHA generieren:** Bieten Sie barrierefreie Audio-Herausforderungen
+  für sehbehinderte Benutzer.
+* **CAPTCHA überprüfen:** Eine einfache und zuverlässige Methode, um
+  Benutzereingaben anhand des generierten CAPTCHA-Werts zu überprüfen.
 
-### #Funktionieren #Zuweisen:<br><br>
-Generier Image CAPTCHA - diese Aufgabe schafft ein einmaliges Image-basisbezogen
-CAPTCHA mit #mehrere customizable Optionen:
-* **Dimensionen:** Präzisiert die exakte Weite und Höhe von die CAPTCHA Image zu
-  passen eure UI.
-* **#Einverstanden Typ:** Definieren die Charaktere zu sein benutzt herein die
-  CAPTCHA. Du können von Nummern auswählen, lateinische Charaktere, #usw...
-* **CAPTCHA Länge:** Reguliert herein die Nummer Charaktere die CAPTCHA Schnur.
-* **Geräusch:** Fügen zu verschiedene Typen von visuell Geräusch zu dem Image,
-  wie direkt Linien oder geschwungene Linien, zu machen ihm härter für bots zu
-  lesen.
-* **Hintergrund:** Passt an den Hintergrund Typ und präzisieren Farbe von die
-  CAPTCHA Image.
+### Funktionsdetails:<br><br>
+Bild-CAPTCHA generieren – diese Funktion erstellt ein einzigartiges
+bildbasiertes CAPTCHA mit mehreren anpassbaren Optionen:
+* **Abmessungen:** Geben Sie die genaue Breite und Höhe des CAPTCHA-Bildes an,
+  damit es zu Ihrer Benutzeroberfläche passt.
+* **Inhaltstyp:** Definieren Sie die Zeichen, die im CAPTCHA verwendet werden
+  sollen. Sie können zwischen Zahlen, lateinischen Buchstaben usw. wählen.
+* **CAPTCHA-Länge:** Steuert die Anzahl der Zeichen in der CAPTCHA-Zeichenfolge.
+* **Rauschen:** Fügen Sie dem Bild verschiedene Arten von visuellem Rauschen
+  hinzu, z. B. gerade oder gekrümmte Linien, um das Lesen für Bots zu
+  erschweren.
+* **Hintergrund:** Passen Sie den Hintergrundtyp an und legen Sie die Farbe des
+  CAPTCHA-Bildes fest.
 
-Generier Audio CAPTCHA - diese Aufgabe schafft eine #Audio- Datei jener liest
-aus die CAPTCHA Charaktere, #anbieten #ein **erreichbar** Alternative zu dem
-Image CAPTCHA:
-* **#Einverstanden Typ:** Der Inhalt von dem Audio CAPTCHA ist gegründet auf den
-  Stimme Produzenten, du können der Schauplatz auswählen, dort ist viele Land
-  Schauplätze du können auswählen.
-* **Optionales Laut Geräusch:** Fügt zu eine Auflage Hintergrund Geräusch zu der
-  #Audio- Datei zu verhindern automatisiert Abschrift. Dieser Charakterzug
-  erweitert Sicherheit für das Audio CAPTCHA.
+Audio-CAPTCHA generieren – diese Funktion erstellt eine Audiodatei, die die
+CAPTCHA-Zeichen vorliest und eine barrierefreie Alternative **** zum
+Bild-CAPTCHA bietet:
+* **Inhaltstyp:** Der Inhalt des Audio-CAPTCHAs basiert auf dem
+  Sprachproduzenten. Sie können die Sprache auswählen, es stehen viele
+  Ländersprachen zur Auswahl.
+* **Optionales Hintergrundgeräusch:** Fügen Sie der Audiodatei eine Ebene mit
+  Hintergrundgeräuschen hinzu, um eine automatische Transkription zu verhindern.
+  Diese Funktion erhöht die Sicherheit für das Audio-CAPTCHA.
 
 ## Demo
 
-1. Starte den Demo Arbeitsgang "Überprüft Captcha"
+1. Starten Sie den Demo-Prozess „Captcha überprüfen”.
 
 <img width="1713" height="812" alt="image" src="https://github.com/user-attachments/assets/babd0f62-949e-4db8-9c56-a5f1f2238824" />
 
-2. Du können zwischen Image und Stimme Verifikation auswählen
+2. Sie können zwischen Bild- und Sprachverifizierung wählen.
 
 <img width="916" height="566" alt="image" src="https://github.com/user-attachments/assets/df4979e1-6aa3-479f-b2c6-b415cfa0218d" />
 
-Auskunft für Entwickler: Das `generateImageCaptcha` #funktionieren ist benutzt
-in dem Hintergrund zu generieren dem Captcha Image gegründet auf den
-NutzersInput und Lagen.
+Informationen für Entwickler: Die Funktion „ `generateImageCaptcha` ” wird im
+Hintergrund verwendet, um das Captcha-Bild basierend auf den Eingaben und
+Einstellungen des Benutzers zu generieren.
 
-### Image Verifikation
+### Bildüberprüfung
 
-![Image-captcha](images/image-captcha.png)
+![image-captcha](images/image-captcha.png)
 
-### #Audio- Verifikation
+### Audioüberprüfung
 
-![Audio-captcha](images/audio-captcha.png)
+![audio-captcha](images/audio-captcha.png)
