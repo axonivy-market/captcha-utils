@@ -7,14 +7,14 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>${project.name}</module>
-    <module>${project.name}-demo</module>
-    <module>${project.name}-test</module>
-    <module>${project.name}-product</module>
+    <module>captcha-utils</module>
+    <module>captcha-utils-demo</module>
+    <module>captcha-utils-test</module>
+    <module>captcha-utils-product</module>
   </modules>
 
   <scm>
-    <developerConnection>scm:git:https://github.com/axonivy-market/${project.name}.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/axonivy-market/captcha-utils.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
