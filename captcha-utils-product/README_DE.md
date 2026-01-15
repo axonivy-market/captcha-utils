@@ -40,13 +40,12 @@ Bild-CAPTCHA bietet:
 
 ## Demo
 
-1. Starten Sie den Demo-Prozess „Captcha überprüfen”.
-
-<img width="1713" height="812" alt="image" src="https://github.com/user-attachments/assets/babd0f62-949e-4db8-9c56-a5f1f2238824" />
+1. Start the demo process "Verify Captcha"
+   ![image-captcha-demo1](images/captcha-demo1.png)
 
 2. Sie können zwischen Bild- und Sprachverifizierung wählen.
 
-<img width="916" height="566" alt="image" src="https://github.com/user-attachments/assets/df4979e1-6aa3-479f-b2c6-b415cfa0218d" />
+![image-captcha-demo2](images/captcha-demo2.png)
 
 Informationen für Entwickler: Die Funktion „ `generateImageCaptcha` ” wird im
 Hintergrund verwendet, um das Captcha-Bild basierend auf den Eingaben und
