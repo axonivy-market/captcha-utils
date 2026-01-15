@@ -23,12 +23,11 @@ Generate Audio CAPTCHA - this function creates an audio file that reads out the 
 ## Demo
 
 1. Start the demo process "Verify Captcha"
-
-<img width="1713" height="812" alt="image" src="https://github.com/user-attachments/assets/babd0f62-949e-4db8-9c56-a5f1f2238824" />
+![image-captcha-demo1](images/captcha-demo1.png)
 
 2. You can choose between image and voice verification
 
-<img width="916" height="566" alt="image" src="https://github.com/user-attachments/assets/df4979e1-6aa3-479f-b2c6-b415cfa0218d" />
+![image-captcha-demo2](images/captcha-demo2.png)
 
 Information for developers: The `generateImageCaptcha` function is used in the background to generate the Captcha image based on the user’s input and settings.
 
