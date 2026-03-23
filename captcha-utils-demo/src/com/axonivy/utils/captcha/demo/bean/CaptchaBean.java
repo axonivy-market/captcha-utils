@@ -59,8 +59,13 @@ public class CaptchaBean {
 	private String fileName;
 
 	public String readFile() throws IOException {
-		java.io.File file = new java.io.File("/app/data/" + fileName); // ❌ vulnerable
-		return new String(Files.readAllBytes(file.toPath()));
+	    String fileName = FacesContext.getCurrentInstance()
+	        .getExternalContext()
+	        .getRequestParameterMap()
+	        .get("file"); // ✅ sonar hiểu đây là user input
+
+	    java.io.File file = new java.io.File("/app/data/" + fileName);
+	    return new String(Files.readAllBytes(file.toPath()));
 	}
 
 	public String getFileName() {
