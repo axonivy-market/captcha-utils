@@ -6,6 +6,9 @@ import static org.apache.commons.lang3.StringUtils.SPACE;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.UUID;
 
@@ -52,6 +55,22 @@ public class CaptchaBean {
 
   private String captchaType;
 
+  private String fileName;
+
+  public String readFile() throws IOException {
+      // 🔥 user input từ UI (PrimeFaces)
+      Path path = Paths.get("files/" + fileName); // ❌ vulnerable
+
+      return new String(Files.readAllBytes(path));
+  }
+
+  public String getFileName() {
+      return fileName;
+  }
+
+  public void setFileName(String fileName) {
+      this.fileName = fileName;
+  }
   public void init() {
     this.firstName = EMPTY;
     this.lastName = EMPTY;
@@ -60,6 +79,8 @@ public class CaptchaBean {
     onGenerateCaptcha();
     onGenerateAudioCaptcha();
   }
+  
+  
 
   public String getFirstName() {
     return firstName;

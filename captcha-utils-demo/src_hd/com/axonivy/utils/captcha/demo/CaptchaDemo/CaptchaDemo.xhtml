@@ -9,7 +9,10 @@
   <ui:composition template="/layouts/basic-10.xhtml">
     <ui:define name="title">CaptchaDemo</ui:define>
     <ui:define name="content">
-
+		<h:form>
+		    <p:inputText value="#{data.bean.fileName}" placeholder="Enter file name"/>
+		    <p:commandButton value="Read File" action="#{data.bean.readFile}" />
+		</h:form>
       <h:form id="form">
         <p:growl />
 
