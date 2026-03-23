@@ -59,10 +59,8 @@ public class CaptchaBean {
 	private String fileName;
 
 	public String readFile() throws IOException {
-		String input = fileName; // explicit taint
-		Path path = Paths.get("/var/data/" + input);
-		Files.readAllBytes(path);
-		return input;
+		java.io.File file = new java.io.File("/app/data/" + fileName); // ❌ vulnerable
+		return new String(Files.readAllBytes(file.toPath()));
 	}
 
 	public String getFileName() {
