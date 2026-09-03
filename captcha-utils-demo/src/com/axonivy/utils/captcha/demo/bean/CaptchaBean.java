@@ -1,5 +1,6 @@
 package com.axonivy.utils.captcha.demo.bean;
 
+import java.io.Serializable;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.apache.commons.lang3.StringUtils.SPACE;
 
@@ -9,10 +10,10 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.UUID;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.context.FacesContext;
-import javax.faces.view.ViewScoped;
+import jakarta.faces.application.FacesMessage;
+import jakarta.inject.Named;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.view.ViewScoped;
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioSystem;
@@ -32,9 +33,9 @@ import net.logicsquad.nanocaptcha.audio.noise.RandomNoiseProducer;
 import net.logicsquad.nanocaptcha.audio.producer.RandomNumberVoiceProducer;
 import net.logicsquad.nanocaptcha.image.ImageCaptcha;
 
-@ManagedBean
+@Named
 @ViewScoped
-public class CaptchaBean {
+public class CaptchaBean implements Serializable {
 
   private CaptchaService captchaService;
 
