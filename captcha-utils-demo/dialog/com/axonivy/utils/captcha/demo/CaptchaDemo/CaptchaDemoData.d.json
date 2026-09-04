@@ -4,6 +4,7 @@
   "namespace" : "com.axonivy.utils.captcha.demo.CaptchaDemo",
   "fields" : [ {
     "name" : "bean",
-    "type" : "com.axonivy.utils.captcha.demo.bean.CaptchaBean"
+    "type" : "com.axonivy.utils.captcha.demo.bean.CaptchaBean",
+    "modifiers" : [ ]
   } ]
 }
