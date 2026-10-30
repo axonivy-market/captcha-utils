@@ -31,6 +31,10 @@ Generate Audio CAPTCHA - this function creates an audio file that reads out the 
 
 Information for developers: The `generateImageCaptcha` function is used in the background to generate the Captcha image based on the user’s input and settings.
 
+### Verification behavior change
+
+`validateCaptcha(input, captcha)` now requires an exact, case-sensitive match of the complete CAPTCHA answer. Previously, any substring of the answer (for example a single digit) was accepted. Integrations must submit the complete CAPTCHA answer. Null or empty input and null challenge values are rejected. Rate limiting and challenge lifecycle improvements are not included and remain separate follow-up work.
+
 ### Image verification
 
 ![image-captcha](images/image-captcha.png)

@@ -1,8 +1,9 @@
 package com.axonivy.utils.captcha.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import com.axonivy.utils.captcha.ImageCaptchaBuilder;
@@ -98,5 +99,68 @@ public class CaptchaTest {
 
     // Assertions
     assertEquals(false, isValid);
+  }
+
+  @Test
+  public void shouldAcceptCompleteCaptchaAnswer() {
+    assertTrue(captchaService.validateCaptcha("483921", "483921"));
+  }
+
+  @Test
+  public void shouldRejectEverySingleDigitGuess() {
+    for (char digit = '0'; digit <= '9'; digit++) {
+      assertFalse(captchaService.validateCaptcha(String.valueOf(digit), "483921"),
+          "single digit " + digit + " must not match");
+    }
+  }
+
+  @Test
+  public void shouldRejectPrefixMiddleAndSuffixSubstrings() {
+    String captcha = "483921";
+    assertFalse(captchaService.validateCaptcha("48", captcha));
+    assertFalse(captchaService.validateCaptcha("4839", captcha));
+    assertFalse(captchaService.validateCaptcha("392", captcha));
+    assertFalse(captchaService.validateCaptcha("21", captcha));
+    assertFalse(captchaService.validateCaptcha("921", captcha));
+    assertFalse(captchaService.validateCaptcha("39214", captcha));
+  }
+
+  @Test
+  public void shouldRejectUnrelatedAnswers() {
+    String captcha = "483921";
+    assertFalse(captchaService.validateCaptcha("123456", captcha));
+    assertFalse(captchaService.validateCaptcha("999999", captcha));
+    assertFalse(captchaService.validateCaptcha("000000", captcha));
+  }
+
+  @Test
+  public void shouldRejectExtraCharacters() {
+    String captcha = "483921";
+    assertFalse(captchaService.validateCaptcha("4839211", captcha));
+    assertFalse(captchaService.validateCaptcha("1483921", captcha));
+    assertFalse(captchaService.validateCaptcha("483921 ", captcha));
+    assertFalse(captchaService.validateCaptcha(" 483921", captcha));
+  }
+
+  @Test
+  public void shouldRejectCaseDifferences() {
+    String captcha = "AbC123";
+    assertTrue(captchaService.validateCaptcha("AbC123", captcha));
+    assertFalse(captchaService.validateCaptcha("abc123", captcha));
+    assertFalse(captchaService.validateCaptcha("ABC123", captcha));
+    assertFalse(captchaService.validateCaptcha("bC1", captcha));
+  }
+
+  @Test
+  public void shouldRejectEmptyInputs() {
+    assertFalse(captchaService.validateCaptcha("", "483921"));
+    assertFalse(captchaService.validateCaptcha("", ""));
+  }
+
+  @Test
+  public void shouldRejectNullInputOrChallenge() {
+    assertFalse(captchaService.validateCaptcha(null, "483921"));
+    assertFalse(captchaService.validateCaptcha("483921", null));
+    assertFalse(captchaService.validateCaptcha(null, null));
   }
 }
